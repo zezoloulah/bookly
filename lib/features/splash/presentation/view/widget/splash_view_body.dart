@@ -1,7 +1,6 @@
 import 'package:bookly/core/util/app_image.dart';
 import 'package:bookly/features/home/presentation/view/home_Screen.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:svg_flutter/svg_flutter.dart';
 
 class SplashViewBody extends StatefulWidget {

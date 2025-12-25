@@ -23,7 +23,9 @@ class DetailsViewBody extends StatelessWidget {
             SizedBox(height: h * 0.05),
             Center(child: Image.asset(AppImage.book, height: h * 0.35)),
             SizedBox(height: h * 0.03),
-            Center(child: Text("The Jungle Book", style: TextStyle(fontSize: 26))),
+            Center(
+              child: Text("The Jungle Book", style: TextStyle(fontSize: 26)),
+            ),
             Center(
               child: Text(
                 "Rudyard Kipling",
@@ -45,8 +47,8 @@ class DetailsViewBody extends StatelessWidget {
             SizedBox(height: h * 0.05),
             CustomPrise(),
             SizedBox(height: h * 0.04),
-            Text("You can also like",style: TextStyle(fontSize: 15),),
-            CustomShowItem(width:0.2 ,hight: 0.05,)
+            Text("You can also like", style: TextStyle(fontSize: 15)),
+            CustomShowItem(width: 0.2, hight: 0.05),
           ],
         ),
       ),

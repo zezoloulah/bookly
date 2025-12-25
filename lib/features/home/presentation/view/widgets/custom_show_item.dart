@@ -20,7 +20,10 @@ class CustomShowItem extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: GestureDetector(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder:(context)=>DetailsScreen() ));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DetailsScreen()),
+                );
               },
               child: Container(
                 height: h * hight,

@@ -6,16 +6,16 @@ class CustomListSeller extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-      final h = MediaQuery.of(context).size.height;
+    final h = MediaQuery.of(context).size.height;
     return Container(
-            height: h*0.53,
-            width: double.infinity,
-            child: ListView.builder(
-              itemCount: 5,
-              itemBuilder: (context, count) {
-                return CustomShowBestSeller();
-              },
-            ),
-          );
+      height: h * 0.53,
+      width: double.infinity,
+      child: ListView.builder(
+        itemCount: 5,
+        itemBuilder: (context, count) {
+          return CustomShowBestSeller();
+        },
+      ),
+    );
   }
 }

@@ -2,7 +2,6 @@ import 'package:bookly/core/util/app_image.dart';
 import 'package:bookly/features/details/presentation/view/details_screen.dart';
 import 'package:flutter/material.dart';
 
-
 class CustomShowBestSeller extends StatelessWidget {
   const CustomShowBestSeller({super.key});
 
@@ -12,7 +11,10 @@ class CustomShowBestSeller extends StatelessWidget {
     final w = MediaQuery.of(context).size.width;
     return GestureDetector(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context)=> DetailsScreen() ));
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => DetailsScreen()),
+        );
       },
       child: Container(
         height: h * 0.2,

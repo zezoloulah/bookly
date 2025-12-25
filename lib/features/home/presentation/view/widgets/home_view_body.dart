@@ -15,15 +15,15 @@ class HomeViewBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(height: h * 0.05),
-          CustomAppBar(icon: Icon(Icons.search,size:h*0.05),isLogo: true,),
+          CustomAppBar(icon: Icon(Icons.search, size: h * 0.05), isLogo: true),
           SizedBox(height: h * 0.05),
-          CustomShowItem(hight: 0.5,width: 0.25,),
+          CustomShowItem(hight: 0.5, width: 0.25),
           SizedBox(height: h * 0.025),
           Text(
             "Best Seller",
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
-          CustomListSeller()
+          CustomListSeller(),
         ],
       ),
     );
