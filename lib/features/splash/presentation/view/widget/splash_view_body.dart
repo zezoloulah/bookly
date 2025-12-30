@@ -13,7 +13,12 @@ class SplashViewBody extends StatefulWidget {
 class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
-    splashNavigate();
+    Future.delayed(Duration(seconds: 4), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => HomeScreen()),
+      );
+    });
     super.initState();
   }
 
@@ -21,7 +26,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   Widget build(BuildContext context) {
     final h = MediaQuery.of(context).size.height;
     return Container(
-      child: Center(child: SvgPicture.asset(height: h * 0.09, AppImage.logo)),
+      child: Center(child: SvgPicture.asset(height: h * 0.07, AppImage.logo)),
     );
   }
 

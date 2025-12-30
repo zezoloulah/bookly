@@ -1,19 +1,21 @@
-import 'package:bookly/core/util/app_image.dart';
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:svg_flutter/svg.dart';
 
-class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key, required this.icon, this.isLogo = false});
-  final bool isLogo;
-  final Icon icon;
+import 'package:bookly/core/util/app_image.dart';
 
+class CustomAppBar extends StatelessWidget {
+  const CustomAppBar({super.key, required this.isLogo, required this.icon, this.onTap});
+  final bool? isLogo;
+  final Icon icon;
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     final h = MediaQuery.of(context).size.height;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        isLogo
+        isLogo!
             ? SvgPicture.asset(AppImage.logo, height: h * 0.04)
             : GestureDetector(
                 onTap: () {
@@ -21,7 +23,7 @@ class CustomAppBar extends StatelessWidget {
                 },
                 child: Icon(Icons.close),
               ),
-        icon,
+        GestureDetector(onTap: onTap, child: icon),
       ],
     );
   }
